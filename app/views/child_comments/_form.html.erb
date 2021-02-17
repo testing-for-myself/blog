@@ -1,0 +1,17 @@
+<%= # form_with(model: [ @article, @comment, @article.comments.child_comments.build ], local: true) do |form| 
+%>
+    <%= simple_form_for(@child_comment) do |form| 
+    %>
+    <p>
+      <%= form.label :commenter %><br>
+      <%= form.text_field :commenter %>
+    </p>
+    <p>
+      <%= form.label :body %><br>
+      <%= form.text_area :body %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+  

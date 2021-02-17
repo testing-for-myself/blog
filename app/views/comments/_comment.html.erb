@@ -7,3 +7,25 @@
 <strong>Comment:</strong>
 <%= comment.body %>
 </p>
+
+<h2>
+Add child Comment
+<%= #render 'child_comments/form' 
+%> 
+</h2>
+
+<p>
+<%= 
+=begin
+link_to 'Add child comment', [childcomment.comment, comment],
+            method: :create,
+            data: {confirm: "are you sure???"} 
+=end
+            %>
+</p>
+
+<p>
+<%= link_to 'Destroy Comment', [comment.article, comment],
+            method: :delete,
+            data: {confirm: "are you sure???"} %>
+</p>

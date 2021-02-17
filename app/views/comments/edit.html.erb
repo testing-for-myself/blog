@@ -1,0 +1,20 @@
+<h1>Edit Comment</h1>
+<%= render 'edit_form' %>
+
+
+
+<p>
+<%= 
+=begin
+link_to 'Back to article', [@comment.article_id, @comment.id],
+            method: :view
+=end
+            %>
+</p>
+
+
+<%= 
+=begin
+TODO:  fix link to go back to parent article
+=end
+link_to 'Back', article_path(@comment.article_id)%>
